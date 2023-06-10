@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <table>
+        <tr>
+            <th>Item Name</th>
+            <th>Prediction</th>
+        </tr>
+        {% for item in result.iterrows() %}
+        <tr>
+            <td>{{ item[1]['item_name'] }}</td>
+            <td>{{ item[1]['prediction'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
